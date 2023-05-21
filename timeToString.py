@@ -36,6 +36,17 @@ def timeToStringThree(strInput, strLayout):
   return sum
 
 
+def timeToStringFour(strInput, strLayout):
+  strInput = list(strInput)
+  strLayout = list(strLayout)
+  sum = 0
+  prev = 0
+  charMap = {char : index for index, char in enumerate(strLayout)}
+  for char in strInput:
+    sum += abs(prev - charMap[char])
+    prev = charMap[char]
+  return sum
+
 
 layout = "abcdefghijklmnopqrstuvwxyz"
 text = "cba"
@@ -43,6 +54,7 @@ text = "cba"
 print(timeToString(text, layout))
 print(timeToStringTwo(text, layout))
 print(timeToStringThree(text, layout))
+print(timeToStringFour(text, layout))
 
 
 layout = "qazwsxedcrfvtgbyhnujmikolp"
@@ -51,5 +63,8 @@ text = "cba"
 print(timeToString(text, layout))
 print(timeToStringTwo(text, layout))
 print(timeToStringThree(text, layout))
+print(timeToStringFour(text, layout))
+
+
 
 #
