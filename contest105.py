@@ -15,7 +15,7 @@ def maxStrength(nums):
     nums.sort()
     for index, value in enumerate(nums):
         if value < 0 and index < len(nums) -1 and nums[index + 1] < 0:
-            strength *= value
+            strength *= 
         elif value > 0:
             strength *= value
     return strength
