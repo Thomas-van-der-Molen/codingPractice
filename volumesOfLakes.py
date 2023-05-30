@@ -54,3 +54,6 @@ def volumeOfLakes(islands):
 lakes = [1,3,2,4,1,3,1,4,5,2,2,1,4,2,2]
 volumeOfLakes(lakes)
 
+
+#Now do it again, but use dijkstra like google wants
+
