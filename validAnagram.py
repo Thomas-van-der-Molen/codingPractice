@@ -25,3 +25,12 @@ def validAnagram(s, t):
 
 print(validAnagram("anagram", "nagaram"))
 print(validAnagram("rat", "car"))
+
+def twoSum(nums, target):
+  seen = {}
+  for index, value in enumerate(nums):
+    if target-value in seen:
+      return [index, seen[target-value]]
+    else:
+      seen[value] = index
+  return []
